@@ -3,9 +3,9 @@ const initialState = ""
 const notificationReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_NOTIFICATION':
-          return state
+          return "You voted for: '" + action.data.content + "'"
         case 'REMOVE_NOTIFICATION':
-          return state.map
+          return ""
         default:
           return state
       }
