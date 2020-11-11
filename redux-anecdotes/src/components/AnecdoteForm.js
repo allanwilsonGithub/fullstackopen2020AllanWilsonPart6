@@ -21,9 +21,9 @@ const AnecdoteForm = () => {
 
     return (
     <div>
-    <h2>create new</h2>
+    <h2>Create new anecdote ...</h2>
     <form onSubmit={addNewAnecdote}>
-        <div><input name="anecdote" /></div>
+        <div><input name="anecdote" /></div><br></br>
         <button type="submit">create</button>
     </form>
     </div>

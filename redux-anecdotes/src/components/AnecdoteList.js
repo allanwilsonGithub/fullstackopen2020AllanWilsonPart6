@@ -17,7 +17,6 @@ const AnecdoteList = () => {
     }
       return (
         <div>
-        <h2>Anecdotes</h2>
         {anecdotes.anecdotes.sort(function (a, b) {
           return b.votes - a.votes;
         })
@@ -28,8 +27,7 @@ const AnecdoteList = () => {
                 {anecdote.content}
             </div>
             <div>
-                has {anecdote.votes}
-                <button onClick={() => handleVoteClick(anecdote.id, anecdote.content)}>vote</button>
+                <pre>has {anecdote.votes} <button onClick={() => handleVoteClick(anecdote.id, anecdote.content)}>vote</button></pre><hr></hr>
             </div>
             </div>
         )}
