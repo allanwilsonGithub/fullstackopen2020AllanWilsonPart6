@@ -1,7 +1,5 @@
 import anecdotesService from '../services/anecdotes'
 
-const getId = () => (100000 * Math.random()).toFixed(0)
-
 const anecdoteReducer = (state = [], action) => {
 
   switch (action.type) {
@@ -13,7 +11,7 @@ const anecdoteReducer = (state = [], action) => {
     case 'NEW_ANECDOTE':
       const anecdoteToAdd = {
         content: action.data.content,
-        id: getId(),
+        id: action.data.id,
         votes: 0
         }
         return [...state, anecdoteToAdd]
