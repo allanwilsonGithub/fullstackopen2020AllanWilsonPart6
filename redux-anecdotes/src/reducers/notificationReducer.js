@@ -19,11 +19,12 @@ const notificationReducer = (state = initialState, action) => {
             content,
           }
         })
-        setTimeout(() => {
+        const timer = setTimeout(() => {
           dispatch({
             type: 'REMOVE_NOTIFICATION',
           })
         }, timeout)
+        clearTimeout(timer-1)
       }
     }
 
